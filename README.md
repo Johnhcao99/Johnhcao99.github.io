@@ -1,4 +1,3 @@
-title: Han Cao
-description: Mathematics Ph.D. Candidate | University of Southern California
-theme: jekyll-theme-minimal
-show_downloads: false
+# Han Cao's Personal Website
+
+Source files for my personal website.
