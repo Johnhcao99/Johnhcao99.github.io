@@ -1,0 +1,122 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body {
+  margin: 0;
+  padding: 64px 24px;
+  background: #d5d1cb;
+  color: #374151;
+}
+
+/* A separate fixed layer keeps the photo stable while the page scrolls. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: url("{{ '/assets/images/brooklyn-bridge.jpg' | relative_url }}") center center / cover no-repeat;
+  pointer-events: none;
+}
+
+div.wrapper {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 32px 48px;
+  box-sizing: border-box;
+  width: 960px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  box-shadow: 0 12px 48px rgba(30, 25, 20, 0.2);
+}
+
+header, section, footer {
+  position: static;
+  float: none;
+  width: auto;
+  min-width: 0;
+}
+
+header {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 0;
+}
+
+section {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+footer {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    padding: 40px 20px;
+  }
+
+  div.wrapper {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding: 28px;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  header ul {
+    position: static;
+  }
+
+  section {
+    padding: 24px 0;
+    margin: 0 0 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 24px 12px;
+  }
+
+  div.wrapper {
+    padding: 24px 20px;
+    border-radius: 10px;
+  }
+}
+
+@media print {
+  body {
+    padding: 0;
+    background: #fff;
+  }
+
+  body::before {
+    display: none;
+  }
+
+  div.wrapper {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
