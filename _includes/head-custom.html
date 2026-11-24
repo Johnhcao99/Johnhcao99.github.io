@@ -1,0 +1,8 @@
+{% include head-custom-google-analytics.html %}
+{% if page.background %}
+<style>
+  :root {
+    --page-background: url("{{ page.background | relative_url }}");
+  }
+</style>
+{% endif %}

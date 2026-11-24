@@ -16,7 +16,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: url("{{ '/assets/images/brooklyn-bridge.jpg' | relative_url }}") center center / cover no-repeat;
+  background: var(--page-background, url("{{ '/assets/images/brooklyn-bridge.jpg' | relative_url }}")) center center / cover no-repeat;
   pointer-events: none;
 }
 
@@ -32,7 +32,7 @@ div.wrapper {
   max-width: 100%;
   margin: 0 auto;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.785);
   border-radius: 14px;
   box-shadow: 0 12px 48px rgba(30, 25, 20, 0.2);
 }
