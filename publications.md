@@ -2,7 +2,7 @@
 layout: default
 title: Publications
 permalink: /publications/
-background: /assets/images/waves-rocks.jpg
+background: /assets/images/chicago-cloud-gate.jpg
 ---
 
 [Home]({{ '/' | relative_url }}) · [Projects]({{ '/projects/' | relative_url }})
