@@ -2,7 +2,7 @@
 layout: default
 title: Projects
 permalink: /projects/
-background: /assets/images/paris-sunset.jpg
+background: /assets/images/paris-panorama.jpg
 ---
 
 [Home]({{ '/' | relative_url }}) · [Publications]({{ '/publications/' | relative_url }})
